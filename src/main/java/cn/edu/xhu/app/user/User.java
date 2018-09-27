@@ -4,6 +4,10 @@ import cn.edu.xhu.app.company.Company;
 import cn.edu.xhu.app.position.Position;
 import cn.edu.xhu.app.positionClass.PositionClass;
 
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.ArrayList;
 
 /**
@@ -12,8 +16,12 @@ import java.util.ArrayList;
  * @Date: 2018/9/25  15:17:29
  * @Description: ...
  */
+@Entity
+@Table(name="tb_user")
 public class User {
     //property
+    @Id
+    @Generated()
     private Integer id;
     private String username;
     private String password;
