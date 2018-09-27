@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/users")
 public class UserController {
     @ResponseBody
-    @RequestMapping(value="/login.json", method= RequestMethod.POST)
+    @RequestMapping(value="/login.json")
     public Result login(
             @RequestParam(value = "username", required = true,defaultValue = "0") String username,
             @RequestParam(value = "password", required = true,defaultValue = "0") String password){
