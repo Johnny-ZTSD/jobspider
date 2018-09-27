@@ -5,9 +5,7 @@ import cn.edu.xhu.app.position.Position;
 import cn.edu.xhu.app.positionClass.PositionClass;
 
 import javax.annotation.Generated;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 
 /**
@@ -21,8 +19,11 @@ import java.util.ArrayList;
 public class User {
     //property
     @Id
-    @Generated()
+    @Column(name="pk_user_id")
+    @GeneratedValue
     private Integer id;
+
+    @Column(name="username", unique=true, nullable=false, columnDefinition="varchar(30) comment '主键'")
     private String username;
     private String password;
     private Character sex;

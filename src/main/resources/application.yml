@@ -35,3 +35,11 @@ endpoints:
   shutdown:
     enabled: true #启用shutdown
     sensitive: false #禁用密码验证
+
+
+##################### 自定义属性
+datasource: # database configuration
+    url : jdbc:mysql://johnnyzen.cn:3306/job_spider
+    username : dev
+    password : xhu.university!
+    driver-class-name: com.mysql.jdbc.Driver

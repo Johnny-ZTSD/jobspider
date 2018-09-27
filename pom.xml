@@ -109,6 +109,14 @@
 			<version>3.11.0</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+		<!-- BeanUtils -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.3</version>
+		</dependency>
+
 		<!--&lt;!&ndash;  前端资源下 &ndash;&gt;-->
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.webjars/bootstrap &ndash;&gt;-->
 
