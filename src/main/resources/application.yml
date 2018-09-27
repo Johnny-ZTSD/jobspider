@@ -17,7 +17,7 @@ spring:
     database : MYSQL
     show-sql : true  # 在控制台可以看到SQL语句
     hibernate:
-      ddl-auto : create # update create
+      ddl-auto : update # update create create-drop validate
       naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
       dialect : org.hibernate.dialect.MySQL5Dialect
       format_sql: true # SQL字段类型转换格式化
