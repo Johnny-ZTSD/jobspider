@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!-- 在html中引入此命名空间，可避免编辑器出现html验证错误，虽然加不加命名空间对Thymeleaf的功能没有任何影响。-->
+<head>
+    <meta charset="UTF-8">
+    <title>templateIndex</title>
+
+    <!-- ↓版本需要保持一致↓-->
+    <script src="/frame/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/frame/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/frame/bootstrap/3.3.7/css/bootstrap.min.css" />
+<!-- INDEX CSS-->
+    <!-- INDEX JS-->
+    <!--<link rel="stylesheet" type="text/css" th:href="@{jquery-easyui-1.4.5/demo/demo.css}" />-->
+    <link type="text/css" rel="styleSheet"  th:href="@{static.css}" />  <!--  相对地址:不含context-path  -->
+    <link type="text/css" rel="styleSheet"  th:href="@{/static.css}" /> <!-- 绝对地址：含context-path  -->
+</head>
+<body>
+
+<!--获取上下文路径：
+    th:onclick="@{'location.href=\'' + ${#httpServletRequest.getContextPath()} + '/xxxx\'}"
+ -->
+    <div class="container">
+        <h2>Button</h2>
+        <p>.btn 类是按钮的基本样式:</p>
+        <button type="button" class="btn-warning">基本按钮</button>
+    </div>
+    <div th:text="${param.x}"></div> <!-- request参数,有效 -->
+    <div th:text="${session.y}"></div> <!-- session,有效 -->
+    <div th:text="${application.z}"></div> <!-- application,有效 -->
+
+    <!-- <li th:each="item: ${array}" th:text="${item}">条目</li> -->
+
+    <center>
+        <img th:src="@{/image.png}" title="Thymeleaf 基本用法总结：https://www.cnblogs.com/topwill/p/7434955.html"  />
+    </center>
+    <div>项目地址(物理)：[src/main/resources/templates/templateIndex.html]</div>
+    <div>逻辑地址(URL)： [host:[port][/context-path]/serviceUrlName]</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  servlet:
+      context-path: /job-spider # 开发环境>项目名
+#  tomcat:
+#    uri-encoding: UTF-8
+
+spring:
+  profiles:
+    active: dev
+  datasource: # database configuration
+    url : jdbc:mysql://johnnyzen.cn:3306/job_spider
+    username : dev
+    password : xhu.university!
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database : MYSQL
+    show-sql : true  # 在控制台可以看到SQL语句
+    hibernate:
+      ddl-auto : create # update create
+      naming-strategy : org.hibernate.cfg.ImprovedNamingStrategy
+      dialect : org.hibernate.dialect.MySQL5Dialect
+      format_sql: true # SQL字段类型转换格式化
+  mvc: # SpringMVC
+    view: # 定位模板的目录
+      prefix: classpath:/templates/ # 模板引擎thymeleaf-默认目录：src/main/resources/templates/
+      suffix: .html # 返回页面的默认后缀格式
+  devtools:
+    restart:
+      additional-path: src/main/java #添加哪个目录的文件需要restart
+#      exclude: static/**,public/**
+
+# 关闭Application
+endpoints:
+  shutdown:
+    enabled: true #启用shutdown
+    sensitive: false #禁用密码验证

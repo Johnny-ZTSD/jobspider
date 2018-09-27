@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>static.html</title>
+    <!-- ↓版本需要保持一致↓-->
+    <script src="/job-spider/frame/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/job-spider/frame/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/job-spider/frame/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link type="text/css" rel="styleSheet"  href="@{/static.css}" />
+</head>
+<body>
+    <div th:text="${param.x}"></div> <!-- request参数,无效 -->
+    <div class="container">
+        <h2>Button</h2>
+        <p>.btn 类是按钮的基本样式:</p>
+        <button type="button" class="btn-warning">基本按钮</button>
+    </div>
+    <div>物理地址：src/main/resources/static/static.html</div>
+    <div>url地址：host:port/[context-path]/static.html</div>
+</body>
+</html>

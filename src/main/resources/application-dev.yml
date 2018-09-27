@@ -1,0 +1,6 @@
+server:
+  port: 7070
+  servlet:
+      context-path: /job-spider # 开发环境>项目名
+#  tomcat:
+#    uri-encoding: UTF-8
