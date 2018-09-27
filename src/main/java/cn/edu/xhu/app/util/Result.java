@@ -8,9 +8,9 @@ package cn.edu.xhu.app.util;
  */
 
 public class Result {
-    private int code;
-    private String message;
-    private Object data;
+    private int code = -1;
+    private String message = null;
+    private Object data = null;
 
     public Result() {
         super();

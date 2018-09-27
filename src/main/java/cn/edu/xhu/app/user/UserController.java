@@ -3,16 +3,13 @@ package cn.edu.xhu.app.user;
 import cn.edu.xhu.app.util.Result;
 import cn.edu.xhu.app.util.ResultCode;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
- * @IDE: Created by IntelliJ IDEA.
- * @Author: 千千寰宇
- * @Date: 2018/9/25  15:15:45
- * @Description: ...
+ * Created by IntelliJ IDEA.
+ * @author  千千寰宇
+ * @createTime 2018/9/25  15:15:45
+ * @description ...
  */
 
 @Controller  //默认：html格式输出
@@ -20,20 +17,33 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
     @ResponseBody
-    @RequestMapping(value="/login.json", method= RequestMethod.GET)
-    public Result login(){
-        User user = new User();
-        user.setId(23346);
-        user.setAge(23);
-        user.setUsername("千千寰宇");
-        user.setMajor("软件工程");
-        user.setSchool("西华大学");
-        user.setSex('M');
+    @RequestMapping(value="/login.json", method= RequestMethod.POST)
+    public Result login(
+            @RequestParam(value = "username", required = true,defaultValue = "0") String username,
+            @RequestParam(value = "password", required = true,defaultValue = "0") String password){
 
         Result result = new Result();
-        result.setCode(ResultCode.SUCCESS);
-        result.setMessage("登陆成功！");
-        result.setData(user);
+
+        System.out.println("username:" + username);
+        System.out.println("password:" + password);
+
+        if(username.equals("小皮蛋")  && password.equals("password")){
+            User user = new User();
+            user.setId(23346);
+            user.setAge(23);
+            user.setUsername("小皮蛋");
+            user.setMajor("软件工程");
+            user.setSchool("西华大学");
+            user.setSex('M');
+
+            result.setData(user);
+            result.setCode(ResultCode.SUCCESS);
+            result.setMessage("登陆成功！");
+        } else {
+            result.setCode(ResultCode.FAIL);
+            result.setMessage("登陆失败！");
+            result.setData(null);
+        }
         return result;
     }
 
