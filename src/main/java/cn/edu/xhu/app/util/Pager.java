@@ -17,6 +17,9 @@ public class Pager<T> {
     private int limit;
     private List<T> list;
 
+    public Pager(int curPage, int i, Integer integer, List<T> list) {
+    }
+
     public int getPage() {
         return page;
     }

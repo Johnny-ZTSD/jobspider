@@ -6,11 +6,16 @@ package cn.edu.xhu.app.util.dao;
  * @Date: 2018/9/27  21:51:15
  * @Description: ...
  */
+/**
+ *
+ * @author Zen Johnny
+ * @date 2017年11月11日 下午12:59:50
+ *
+ */
 
 import cn.edu.xhu.app.util.Pager;
 
 import java.util.List;
-
 
 public interface IBaseDao<T> {
     /**
@@ -62,15 +67,15 @@ public interface IBaseDao<T> {
     /**
      * 通过hql获取一个对象
      */
-    public Object findOne(String sql, Object[] args);
-    public Object findOne(String sql, Object arg);
-    public Object findOne(String sql);
+    public Object findOne(String hql, Object[] args);
+    public Object findOne(String hql, Object arg);
+    public Object findOne(String hql);
 
     /**
      * 通过hql更细一组对象
      */
-    public void executeBysql(String sql,Object[] args);
-    public void executeBysql(String sql,Object arg);
-    public void executeBysql(String sql);
+    public void executeByHql(String hql,Object[] args);
+    public void executeByHql(String hql,Object arg);
+    public void executeByHql(String hql);
 
 }

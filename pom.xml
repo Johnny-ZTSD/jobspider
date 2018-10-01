@@ -42,6 +42,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- SpringBoot jdbc -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+
 		<!-- SpringBoot devtools(热部署) -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -72,6 +78,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- tomcat-jsp 添加对jsp视图解析的支持 -->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
 		</dependency>
 
 		<!-- junit -->
@@ -117,6 +133,44 @@
 			<version>1.9.3</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<!-- hibernate -->
+		<!--<dependency>-->
+			<!--<groupId>org.hibernate</groupId>-->
+			<!--<artifactId>hibernate-core</artifactId>-->
+			<!--<version>5.3.0.Final</version>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.hibernate.javax.persistence</groupId>-->
+			<!--<artifactId>hibernate-jpa-2.1-api</artifactId>-->
+			<!--<version>1.0.0.Final</version>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.hibernate.common</groupId>-->
+			<!--<artifactId>hibernate-commons-annotations</artifactId>-->
+			<!--<version>4.0.5.Final</version>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>org.hibernate</groupId>-->
+			<!--<artifactId>hibernate-c3p0</artifactId>-->
+		<!--</dependency>-->
+
+		<!--<dependency>-->
+			<!--<groupId>javassist</groupId>-->
+			<!--<artifactId>javassist</artifactId>-->
+			<!--<version>3.12.1.GA</version>-->
+		<!--</dependency>-->
 		<!--&lt;!&ndash;  前端资源下 &ndash;&gt;-->
 		<!--&lt;!&ndash; https://mvnrepository.com/artifact/org.webjars/bootstrap &ndash;&gt;-->
 

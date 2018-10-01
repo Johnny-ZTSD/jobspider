@@ -2,6 +2,9 @@ package cn.edu.xhu.app.user;
 
 import cn.edu.xhu.app.util.Result;
 import cn.edu.xhu.app.util.ResultCode;
+import cn.edu.xhu.app.util.dao.johnny.DBUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +19,8 @@ import org.springframework.web.bind.annotation.*;
 //@RestController // 默认json格式输出，无需其他配置
 @RequestMapping("/users")
 public class UserController {
+    private final static Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @ResponseBody
     @RequestMapping(value="/login.json")
     public Result login(
